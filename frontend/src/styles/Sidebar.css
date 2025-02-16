@@ -1,0 +1,57 @@
+/* Sidebar - Common for Dashboard & Members */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+    color: rgb(235, 208, 117);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ensures full height */
+    box-sizing: border-box;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* Sidebar Menu */
+.sidebar-menu .menu-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.menu-item .icon {
+    margin-right: 12px;
+}
+
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+.menu-item.active {
+    background: linear-gradient(90deg, #ff1493, #ff4500);
+}
+
+.menu-item.logout {
+    background: red;
+}

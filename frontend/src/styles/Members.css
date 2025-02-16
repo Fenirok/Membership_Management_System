@@ -1,0 +1,138 @@
+/* Overall container */
+.members-container {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(to right, #c3d6c5, #74cf5a);
+}
+
+/* Content */
+.members-content {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header with buttons */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(240, 240, 240);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buttons-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+.add-member, .membership, .back-button {
+  background: #4a90e2;
+  align-items: flex-end;
+  color: rgba(0, 0, 0, 0.814);
+  padding: 10px 15px;
+  border: 0cm color black;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.add-member:hover, .membership:hover, .back-button:hover {
+  background: #357ac9;
+}
+
+/* Back button */
+.back-button {
+  margin-top: 15px;
+  align-self: flex-start;
+}
+
+/* Search bar */
+.search-bar {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Member Grid */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* Member card */
+.member-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  border-color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.member-card:hover {
+  transform: scale(1.05);
+}
+
+/* Member details */
+.member-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.member-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.member-details h3 {
+  margin: 5px 0;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.status-dot.active {
+  background: green;
+}
+
+.status-dot.inactive {
+  background: red;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .add-member, .membership {
+    width: 100%;
+  }
+
+  .members-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
